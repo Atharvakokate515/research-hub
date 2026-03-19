@@ -92,9 +92,7 @@ export default function HomePage() {
       <div className="w-full max-w-[640px] px-4 mb-6">
         <div
           className={`bg-bg-2 border rounded-lg p-4 transition-colors duration-[40ms] ${
-            textareaRef.current === document.activeElement
-              ? 'border-amber'
-              : 'border-border'
+            focused ? 'border-amber' : 'border-border'
           }`}
           onClick={() => textareaRef.current?.focus()}
         >
