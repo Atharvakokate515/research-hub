@@ -101,8 +101,8 @@ export default function HomePage() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={handleKeyDown}
-            onFocus={() => {}} // trigger re-render for border
-            onBlur={() => {}}
+            onFocus={() => setFocused(true)}
+            onBlur={() => setFocused(false)}
             rows={3}
             placeholder="What would you like to research?"
             className="w-full bg-transparent text-text placeholder:text-text-3 resize-none outline-none text-[14px] leading-relaxed font-body"
