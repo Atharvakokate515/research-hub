@@ -26,6 +26,7 @@ function StatusPill({ status }: { status: ResearchJob['status'] }) {
 export default function HomePage() {
   const [query, setQuery] = useState('');
   const [submitting, setSubmitting] = useState(false);
+  const [focused, setFocused] = useState(false);
   const [jobs, setJobs] = useState<ResearchJob[]>([]);
   const navigate = useNavigate();
   const textareaRef = useRef<HTMLTextAreaElement>(null);
